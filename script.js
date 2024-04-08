@@ -4,7 +4,6 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     const watermarkColor = document.getElementById('watermarkColor').value;
     const watermarkSize = document.getElementById('watermarkSize').value;
     const watermarkPosition = document.getElementById('watermarkPosition').value;
-
     // Validate input here (e.g., ensure all fields are filled out)
 
     // Prepare the data to send
@@ -15,12 +14,11 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     formData.append('watermarkSize', watermarkSize);
     formData.append('watermarkPosition', watermarkPosition);
 
-    // Example: Send the data to your server
-    // Replace `YOUR_BACKEND_ENDPOINT` with your actual backend endpoint
-    fetch('YOUR_BACKEND_ENDPOINT', {
+    // Send the data to your server
+    fetch('https://us-central1-vocal-park-418014.cloudfunctions.net/add-watermark', {
         method: 'POST',
         body: formData,
-    })
+    }) // <- Removed semicolon here
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
