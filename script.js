@@ -1,4 +1,5 @@
 document.getElementById('submitBtn').addEventListener('click', function() {
+    console.log('Button clicked!'); // Check if the event is firing
     const imageInput = document.getElementById('imageInput').files[0];
     const watermarkText = document.getElementById('watermarkText').value;
     const watermarkColor = document.getElementById('watermarkColor').value;
