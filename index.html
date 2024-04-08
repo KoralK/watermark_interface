@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watermark Image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Watermark to Your Image</h2>
+        <input type="file" id="imageInput" accept="image/*"><br>
+        <input type="text" id="watermarkText" placeholder="Watermark Text"><br>
+        <input type="color" id="watermarkColor" value="#FFFFFF"><br>
+        <input type="number" id="watermarkSize" placeholder="Font Size (px)"><br>
+        <select id="watermarkPosition">
+            <option value="top-left">Top Left</option>
+            <option value="top-right">Top Right</option>
+            <option value="bottom-left">Bottom Left</option>
+            <option value="bottom-right">Bottom Right</option>
+            <option value="center">Center</option>
+        </select><br>
+        <button id="submitBtn">Add Watermark</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
